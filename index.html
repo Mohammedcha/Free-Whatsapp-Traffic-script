@@ -5,6 +5,7 @@ $text = 'text here';
 $link = 'http://www.website.com';
 $button = 'Share on Whatsapp';
 $confirm = 'Confirm';
+$url = 'https://google.com';
 ?>
 
 <style>
@@ -18,6 +19,6 @@ $confirm = 'Confirm';
 <progress id="progress" value='0' max='<?php echo $progress ?>'></progress>
 <p><a class="step-wp whatsapp sharing" data-action="share/whatsapp/share" href="whatsapp://send?text=<?php echo $text ?>%0A👇👇👇👇👇👇%0A<?php echo $link ?>"<a class='whatsapp' data-diff='10'><?php echo $button ?><span class="pull-right deliv"> </span> </a></p>
 <script> var cl1 = 0; var max_val=<?php echo $max_val ?>; $('document').ready(function(){ $('.whatsapp').click(function(){ cl1++; }); $('.final').click(function(e){ if(cl1 < max_val){ alert("You need to share with <?php echo $max_val ?> Friends or Groups.  "+ eval(parseInt(max_val) - parseInt(cl1)) +" Share Remaining"); e.preventDefault();} else{ window.location.href='#'; }}); }); </script>
-<p><a class="step-final final finals" hi="" href="#" ><?php echo $confirm ?><span class="pull-right deliv"></span></a></p>
+<p><a class="step-final final finals" hi="" href="<?php echo $url ?>" ><?php echo $confirm ?><span class="pull-right deliv"></span></a></p>
 <script>$(".whatsapp").click(function () { animateProgress(parseInt($(this).data('diff'))); }); function animateProgress(diff) { var currValue = $("#progress").val(); var toValue = currValue + diff; toValue = toValue < 0 ? 0 : toValue; toValue = toValue > 100 ? 100 : toValue;$("#progress").animate({'value': toValue}, 500); }</script>
 </center>
