@@ -13,7 +13,7 @@ Then you can copy the entire code and place it wherever you like on your website
 <pre>
 
 $max_val = '5';                         // N° of shares
-$progress = '50';                      // Progress = (max_val) x 10
+$progress = '50';                       // Progress = (max_val) x 10
 
 $button = 'Share on Whatsapp';          // Share on whatsapp button text
 $text = 'text here';                    // Message text 
